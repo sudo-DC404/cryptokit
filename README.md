@@ -1,380 +1,699 @@
-# CryptoKit - Multi-Method Encryption Tool v2.0
+# ReconMaster Pro v2.0
 
-![License](https://img.shields.io/badge/license-Educational-blue)
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
-![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey)
-
-A comprehensive, interactive encryption/decryption tool supporting multiple cryptographic methods for educational purposes and authorized security testing.
+<div align="center">
 
 ```
-╔═══════════════════════════════════════════════════════════════╗
-║              CryptoKit - Multi-Method Encryption              ║
-║          Symmetric | Asymmetric | Classic Ciphers             ║
-╚═══════════════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║          ██████╗ ███████╗ ██████╗ ██████╗ ███╗   ██╗     ║
+║          ██╔══██╗██╔════╝██╔════╝██╔═══██╗████╗  ██║     ║
+║          ██████╔╝█████╗  ██║     ██║   ██║██╔██╗ ██║     ║
+║          ██╔══██╗██╔══╝  ██║     ██║   ██║██║╚██╗██║     ║
+║          ██║  ██║███████╗╚██████╗╚██████╔╝██║ ╚████║     ║
+║          ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝     ║
+║                                                           ║
+║              M A S T E R   P R O   v2.0.0                 ║
+║          All-in-One Reconnaissance Suite                  ║
+╚═══════════════════════════════════════════════════════════╝
 ```
 
-## Features
+**The Ultimate All-in-One Reconnaissance Toolkit**
 
-### 🔐 Symmetric Encryption
-- **AES-256-GCM** - Industry standard authenticated encryption
-- **ChaCha20** - Modern stream cipher
-- **3DES** - Triple DES for legacy compatibility
-- **Blowfish** - Fast block cipher
-- **DES** - Educational purposes only (insecure)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)
+![Version](https://img.shields.io/badge/Version-2.0.0-orange.svg)
 
-### 🔑 Asymmetric Encryption
-- **RSA** - 2048-bit or 4096-bit key pairs with OAEP padding
-- **ECC** - Elliptic Curve Cryptography (secp256r1, secp384r1)
-- Key pair generation and management
-- Public/private key operations
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Documentation](#-documentation) • [Examples](#-examples)
 
-### 🎓 Classic Ciphers
-- **Caesar Cipher** - Substitution cipher with custom shift
-- **Vigenere Cipher** - Polyalphabetic substitution
-- **ROT13** - Simple letter substitution
+</div>
 
-### 🔒 Password-Based Encryption
-- **PBKDF2** key derivation with 600,000 iterations (OWASP recommended)
-- Password-protected file and text encryption
-- Built on AES-256-GCM for maximum security
-- Salt-based protection against rainbow tables
+---
 
-### #️⃣ Hashing & Verification
-- **MD5** - Legacy support (insecure)
-- **SHA-1** - Legacy support (insecure)
-- **SHA-256** - Recommended for most uses
-- **SHA-512** - High-security applications
-- **SHA3-256/SHA3-512** - Next-generation SHA
-- **BLAKE2b/BLAKE2s** - Fast cryptographic hash
-- File integrity verification
-- Hash comparison utilities
+## 🎯 Overview
 
-### 🛠️ Additional Features
-- Interactive menu-driven interface
-- Text and file encryption support
-- Comprehensive key management system
-- Secure key storage with metadata
-- Base64 encoding for text output
-- Color-coded terminal output
-- Cross-platform compatibility
+**ReconMaster Pro** is a cutting-edge, all-in-one reconnaissance framework designed for security professionals, penetration testers, bug bounty hunters, and red team operators. Combining multiple OSINT and reconnaissance techniques into a single, powerful tool with a beautiful Terminal User Interface (TUI).
 
-## Installation
+Built entirely from scratch in Python, it consolidates hours of manual reconnaissance work into automated, streamlined workflows.
 
-### Requirements
-- Python 3.8 or higher
-- pip package manager
+### ⚡ Why ReconMaster Pro?
+
+- **All-in-One Solution** - No need for multiple tools
+- **Beautiful TUI** - Intuitive terminal interface with progress tracking
+- **Production Ready** - Enterprise-grade error handling and retry logic
+- **Multiple Export Formats** - TXT, JSON, CSV support
+- **Session Management** - Save and resume scans
+- **Zero Dependencies (Almost)** - Just Python + Rich library
+- **Single File** - Deploy anywhere in seconds
+
+---
+
+## ✨ Features
+
+### 🔍 Core Modules
+
+| Module | Description | Key Features |
+|--------|-------------|--------------|
+| **CT Scanner** | Certificate Transparency subdomain discovery | Multiple CT log sources, auto-retry, wildcard cleaning |
+| **GitHub Secret Scanner** | Leaked credentials & API key detection | 15+ secret patterns, entropy analysis, confidence scoring |
+| **Company Intel** | OSINT intelligence gathering | Email enumeration, tech stack detection, social media discovery |
+| **Host Validator** | Live host verification | Multi-threaded, HTTP/HTTPS/DNS validation, title extraction |
+| **WHOIS Lookup** | Domain registration information | Registrar, dates, nameservers extraction |
+| **Port Scanner** | Common port enumeration | 13 common ports, service detection |
+
+### 🎨 Advanced Capabilities
+
+- **Entropy Analysis** - Detect high-entropy secrets automatically
+- **Multi-threaded Operations** - Fast concurrent scanning (15 workers)
+- **Retry Logic** - Automatic retries with exponential backoff
+- **Session Persistence** - Save/load scan sessions
+- **Multiple Export Formats** - TXT, JSON, CSV
+- **Real Web Scraping** - Extract emails and tech from websites
+- **Progress Tracking** - Beautiful progress bars and status indicators
+- **Error Recovery** - Graceful handling of failures
+
+### 📊 Secret Detection Patterns
+
+ReconMaster Pro can detect **15+ types** of sensitive information:
+
+- AWS Access Keys & Secret Keys
+- GitHub Personal Access Tokens (Classic & Fine-grained)
+- Google API Keys
+- Slack Tokens & Webhooks
+- Stripe API Keys
+- SendGrid API Keys
+- Twilio API Keys
+- JWT Tokens
+- Database Connection Strings (MongoDB, PostgreSQL, MySQL, Redis)
+- Private SSH Keys
+- Generic API Keys & Secrets
+- Hardcoded Passwords
+- And more...
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+
+- **Python 3.8+** (Python 3.10+ recommended)
+- **pip** (Python package manager)
+- **whois** command-line tool (optional, for WHOIS lookups)
 
 ### Quick Install
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/cryptokit.git
-cd cryptokit
+# Clone or download the tool
+git clone https://github.com/yourusername/reconmaster-pro.git
+cd reconmaster-pro
 
 # Install dependencies
-pip install cryptography pycryptodome
+pip3 install rich requests
 
-# Make executable (Linux/macOS)
-chmod +x cryptokit.py
+# Make executable
+chmod +x recon_suite.py
 
-# Run the tool
-./cryptokit.py
-# or
-python3 cryptokit.py
+# Run it!
+./recon_suite.py
+```
+
+### Manual Install
+
+```bash
+# Download single file
+wget https://raw.githubusercontent.com/yourusername/reconmaster-pro/main/recon_suite.py
+
+# Install dependencies
+pip3 install rich requests
+
+# Make executable
+chmod +x recon_suite.py
 ```
 
 ### Dependencies
 
 ```bash
-cryptography>=45.0.0    # Core cryptographic functions
-pycryptodome>=3.20.0    # DES, 3DES, Blowfish support
+pip3 install rich requests
 ```
 
-## Usage
-
-### Launch the Tool
-
-```bash
-python3 cryptokit.py
-```
-
-### Main Menu
-
-```
-Main Menu:
-1. Symmetric Encryption
-2. Asymmetric Encryption
-3. Classic Ciphers
-4. Password-Based Encryption
-5. Hashing & Verification
-6. Key Management
-7. About
-0. Exit
-```
-
-### Quick Start Examples
-
-#### Encrypt Text with Password
-
-```
-Main Menu > 4 (Password-Based Encryption)
-> 1 (Encrypt Text with Password)
-Enter text: My Secret Message
-Enter password: YourStrongPassword123
-
-✓ Encrypted text will be displayed in base64 format
-```
-
-#### Hash a File for Integrity Verification
-
-```
-Main Menu > 5 (Hashing & Verification)
-> 2 (Hash File)
-Enter file path: document.pdf
-> 3 (SHA-256)
-
-✓ SHA-256 hash will be displayed
-```
-
-#### Generate RSA Key Pair
-
-```
-Main Menu > 2 (Asymmetric Encryption)
-> 1 (Generate RSA Key Pair)
-> 1 (2048-bit Recommended)
-Enter name: my_keypair
-
-✓ Keys saved as my_keypair_private.key and my_keypair_public.key
-```
-
-#### Encrypt File with AES
-
-```
-Main Menu > 1 (Symmetric Encryption)
-> 1 (AES-256-GCM)
-> 3 (Encrypt File)
-Enter input file: sensitive_data.txt
-Enter output file: sensitive_data.txt.enc
-Use saved key? n
-
-✓ New key generated and displayed
-✓ Option to save key for later decryption
-```
-
-## Security Notes
-
-⚠️ **Important Security Considerations:**
-
-1. **Key Storage**: Keys are stored unencrypted in `~/.cryptokit/keys/`. Protect this directory with appropriate file permissions.
-
-2. **Password Strength**: Use strong, unique passwords for password-based encryption. Minimum 12 characters with mixed case, numbers, and symbols.
-
-3. **Algorithm Selection**:
-   - ✅ **Recommended**: AES-256-GCM, ChaCha20, SHA-256, RSA 2048+
-   - ⚠️ **Deprecated**: DES, MD5, SHA-1 (use only for legacy compatibility)
-   - 🎓 **Educational Only**: Caesar, Vigenere, ROT13
-
-4. **File Permissions**: Ensure encrypted files and keys have restricted permissions:
-   ```bash
-   chmod 600 ~/.cryptokit/keys/*
-   ```
-
-5. **RSA Limitations**: RSA can only encrypt data smaller than the key size minus padding (≈190 bytes for 2048-bit). For larger data, use hybrid encryption.
-
-6. **Backup Keys**: Always backup encryption keys securely. Lost keys mean permanently encrypted data.
-
-## Use Cases
-
-### Educational Learning
-- Understand different encryption algorithms
-- Compare classical vs modern cryptography
-- Learn about key derivation and hashing
-- Experiment with various cipher modes
-
-### Security Testing
-- Test file encryption workflows
-- Verify hash-based integrity systems
-- Practice key management procedures
-- Authorized penetration testing scenarios
-
-### Personal Use
-- Encrypt sensitive personal files
-- Generate secure key pairs
-- Verify downloaded file integrity
-- Password-protect confidential documents
-
-## File Structure
-
-```
-~/.cryptokit/
-├── keys/
-│   ├── metadata.json          # Key metadata database
-│   ├── *.key                  # Stored encryption keys
-│   ├── *_private.key          # Private keys
-│   └── *_public.key           # Public keys
-```
-
-## Advanced Features
-
-### Key Management
-
-CryptoKit provides comprehensive key management:
-
-- **Generate Keys**: Create symmetric or asymmetric keys
-- **Save Keys**: Store keys with metadata (algorithm, date, size)
-- **Load Keys**: Retrieve saved keys by name
-- **Export Keys**: Copy keys to custom locations
-- **Delete Keys**: Remove keys with confirmation
-- **List Keys**: View all stored keys with details
-
-### Password-Based Encryption (PBKDF2)
-
-Uses industry-standard key derivation:
-
-- 600,000 iterations (OWASP 2023 recommendation)
-- SHA-256 based
-- Random 16-byte salt per encryption
-- Combined with AES-256-GCM for authenticated encryption
-
-### File Integrity Verification
-
-Multiple verification workflows:
-
-1. **Generate hash** before distribution
-2. **Distribute hash** through secure channel
-3. **Recipient verifies** file integrity
-4. **Compare hashes** to detect tampering
-
-## Troubleshooting
-
-### "Missing required library" Error
-
-```bash
-pip install cryptography pycryptodome
-```
-
-If using a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-# or
-venv\Scripts\activate  # Windows
-pip install cryptography pycryptodome
-```
-
-### Permission Errors
-
-```bash
-chmod +x cryptokit.py
-# or
-chmod 755 cryptokit.py
-```
-
-### Module Import Errors
-
-Ensure Python 3.8+ is installed:
-```bash
-python3 --version
-```
-
-## Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## Educational Disclaimer
-
-⚠️ **FOR EDUCATIONAL AND AUTHORIZED TESTING ONLY**
-
-This tool is designed for:
-- Learning cryptographic concepts
-- Educational demonstrations
-- Authorized security testing
-- Personal file encryption
-
-**NOT** for:
-- Illegal activities
-- Unauthorized access
-- Production systems without proper security review
-- Malicious purposes
-
-Always obtain proper authorization before security testing.
-
-## Algorithm Details
-
-| Algorithm | Type | Key Size | Security Level | Use Case |
-|-----------|------|----------|----------------|----------|
-| AES-256-GCM | Symmetric | 256-bit | ⭐⭐⭐⭐⭐ High | General encryption (recommended) |
-| ChaCha20 | Symmetric | 256-bit | ⭐⭐⭐⭐⭐ High | Mobile/low-power devices |
-| 3DES | Symmetric | 168-bit | ⭐⭐⭐ Medium | Legacy compatibility |
-| Blowfish | Symmetric | 128-bit | ⭐⭐⭐ Medium | Fast encryption |
-| RSA-2048 | Asymmetric | 2048-bit | ⭐⭐⭐⭐ High | Key exchange, signatures |
-| RSA-4096 | Asymmetric | 4096-bit | ⭐⭐⭐⭐⭐ High | High-security applications |
-| ECC-256 | Asymmetric | 256-bit | ⭐⭐⭐⭐ High | Efficient public-key crypto |
-| SHA-256 | Hash | 256-bit | ⭐⭐⭐⭐ High | File integrity, passwords |
-| SHA3-256 | Hash | 256-bit | ⭐⭐⭐⭐⭐ High | Next-gen applications |
-| BLAKE2 | Hash | Variable | ⭐⭐⭐⭐ High | High-performance hashing |
-
-## Version History
-
-### v2.0.0 (Current)
-- Added password-based encryption with PBKDF2
-- Comprehensive hashing suite (MD5, SHA1, SHA256, SHA512, SHA3, BLAKE2)
-- File integrity verification
-- Hash comparison utilities
-- Improved error handling
-- Enhanced menu system
-
-### v1.0.0
-- Initial release
-- Symmetric encryption (AES, ChaCha20, DES, 3DES, Blowfish)
-- Asymmetric encryption (RSA, ECC)
-- Classic ciphers (Caesar, Vigenere, ROT13)
-- Key management system
-- File and text encryption
-
-## License
-
-This project is licensed for **Educational and Authorized Testing Purposes Only**.
-
-See the LICENSE file for details.
-
-## Acknowledgments
-
-- Built with Python's `cryptography` library
-- Uses `pycryptodome` for additional cipher support
-- Follows OWASP security recommendations
-- Implements NIST-approved algorithms
-
-## Support
-
-For issues, questions, or contributions:
-- Open an issue on GitHub
-- Check existing documentation
-- Review security best practices
-
-## Roadmap
-
-Future enhancements planned:
-- [ ] Digital signatures (RSA, ECDSA)
-- [ ] Hybrid encryption for large files
-- [ ] Key encryption with master password
-- [ ] Batch file operations
-- [ ] Compression before encryption
-- [ ] GUI version
-- [ ] Plugin system for custom algorithms
-
-## Links
-
-- [Cryptography Documentation](https://cryptography.io/)
-- [OWASP Cryptographic Storage](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
-- [NIST Cryptographic Standards](https://csrc.nist.gov/)
+That's it! Only 2 dependencies required.
 
 ---
 
-**Remember:** Strong cryptography starts with good operational security. Protect your keys, use strong passwords, and always have backups!
+## 📖 Usage
+
+### Interactive Mode (Recommended)
+
+Launch the beautiful TUI interface:
+
+```bash
+./recon_suite.py
+```
+
+**Interactive Menu:**
+```
+═══ Main Menu ═══
+[1]  Set Target Domain/Company
+[2]  Certificate Transparency Scan
+[3]  GitHub Secret Scan
+[4]  Company Intelligence Gathering
+[5]  Validate Live Hosts
+[6]  WHOIS Lookup
+[7]  Port Scan (Live Hosts)
+[8]  Run All Modules
+[9]  Display Results
+[10] Generate Report (TXT)
+[11] Export to JSON
+[12] Export to CSV
+[13] Save Session
+[14] Load Session
+[15] Exit
+```
+
+### Command-Line Mode
+
+For automation and integration:
+
+```bash
+# Full reconnaissance
+./recon_suite.py -t example.com --all
+
+# Specific modules
+./recon_suite.py -t example.com --ct --github
+./recon_suite.py -t example.com --intel --whois
+
+# With output
+./recon_suite.py -t example.com --all -o report.txt
+
+# Export to JSON/CSV
+./recon_suite.py -t example.com --all --json --csv
+
+# Use GitHub token (recommended)
+./recon_suite.py -t example.com --github --github-token ghp_yourtoken
+
+# Save session for later
+./recon_suite.py -t example.com --all --save myscan.json
+
+# Resume previous session
+./recon_suite.py --load myscan.json
+```
+
+### Command-Line Arguments
+
+```
+-t, --target TARGET        Target domain or company name
+--ct                       Certificate Transparency scan
+--github                   GitHub secret scan
+--intel                    Company intelligence gathering
+--validate                 Validate live hosts
+--whois                    WHOIS lookup
+--ports                    Port scanning
+--all                      Run all modules
+-o, --output FILE          Report filename (TXT)
+--json                     Export to JSON
+--csv                      Export to CSV
+--github-token TOKEN       GitHub API token
+--save FILE                Save session
+--load FILE                Load session
+```
+
+---
+
+## 💡 Examples
+
+### Example 1: Basic Subdomain Discovery
+
+```bash
+./recon_suite.py -t tesla.com --ct --validate
+```
+
+**Output:**
+```
+✓ Found 127 subdomains
+✓ Found 43 live hosts
+
+Discovered Subdomains
+┌────────────────────────────┬──────────┬─────────────────┐
+│ Subdomain                  │ Status   │ IP              │
+├────────────────────────────┼──────────┼─────────────────┤
+│ www.tesla.com              │ live     │ 23.227.38.64    │
+│ shop.tesla.com             │ live     │ 184.25.56.182   │
+│ www.tesla.com              │ live     │ 23.227.38.64    │
+└────────────────────────────┴──────────┴─────────────────┘
+```
+
+### Example 2: GitHub Secret Hunting
+
+```bash
+./recon_suite.py -t "acme-corp" --github --github-token ghp_xxxxx
+```
+
+**Output:**
+```
+✓ Found 8 potential secrets
+
+GitHub Secrets Found
+┌─────────────────────┬──────────────────────┬──────────────────┬────────────┐
+│ Type                │ Repository           │ File             │ Confidence │
+├─────────────────────┼──────────────────────┼──────────────────┼────────────┤
+│ AWS Access Key      │ acme-corp/backend    │ config/aws.yml   │ High       │
+│ Sensitive Config    │ acme-corp/api        │ .env             │ High       │
+│ GitHub Token        │ acme-corp/scripts    │ deploy.sh        │ Medium     │
+└─────────────────────┴──────────────────────┴──────────────────┴────────────┘
+```
+
+### Example 3: Full Automated Scan
+
+```bash
+./recon_suite.py -t hackerone.com --all --json -o hackerone_report.txt
+```
+
+**Performs:**
+1. WHOIS lookup
+2. CT subdomain enumeration
+3. GitHub secret scanning
+4. Company intelligence gathering
+5. Live host validation
+6. Generates TXT report
+7. Exports JSON data
+8. Saves session automatically
+
+### Example 4: Resume Previous Scan
+
+```bash
+# Start scan (interrupted midway)
+./recon_suite.py -t example.com --all --save scan.json
+
+# Resume later
+./recon_suite.py --load scan.json
+```
+
+---
+
+## 📋 Output Formats
+
+### Text Report
+
+Comprehensive, human-readable report:
+
+```
+================================================================================
+RECONNAISSANCE REPORT - example.com
+Generated: 2025-12-23 14:32:15
+ReconMaster Pro v2.0.0
+================================================================================
+
+[+] WHOIS INFORMATION
+--------------------------------------------------------------------------------
+  REGISTRAR: MarkMonitor Inc.
+  CREATION_DATE: 1995-08-14T04:00:00Z
+  EXPIRATION_DATE: 2025-08-13T04:00:00Z
+
+[+] SUBDOMAINS DISCOVERED
+--------------------------------------------------------------------------------
+  Total: 127
+  - www.example.com [live] (93.184.216.34)
+  - mail.example.com [live] (93.184.216.35)
+  ...
+
+[+] GITHUB SECRETS/LEAKS
+--------------------------------------------------------------------------------
+  Total: 3
+  Type: AWS Access Key
+  Repo: example-org/backend
+  File: config/credentials.yml
+  Confidence: High
+  URL:  https://github.com/example-org/backend/blob/main/config/credentials.yml
+  ...
+```
+
+### JSON Export
+
+Structured data for integration:
+
+```json
+{
+  "target": "example.com",
+  "timestamp": "2025-12-23T14:32:15.123456",
+  "version": "2.0.0",
+  "results": {
+    "subdomains": ["www.example.com", "api.example.com"],
+    "live_hosts": {
+      "www.example.com": {
+        "status": "live",
+        "protocol": "https",
+        "status_code": 200,
+        "ip": "93.184.216.34",
+        "server": "nginx"
+      }
+    },
+    "git_secrets": [...],
+    "emails": [...],
+    "technologies": [...],
+    "whois": {...}
+  }
+}
+```
+
+### CSV Export
+
+Perfect for spreadsheet analysis:
+
+```csv
+SUBDOMAINS
+Domain,Status,IP,Protocol,Status Code
+www.example.com,live,93.184.216.34,https,200
+api.example.com,live,93.184.216.35,https,200
+
+GITHUB SECRETS
+Type,Repository,File,URL,Confidence
+AWS Access Key,example-org/backend,config/aws.yml,https://...,High
+```
+
+---
+
+## 🔧 Advanced Usage
+
+### GitHub Token Setup
+
+For unlimited API requests and better results:
+
+1. Go to https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Select scopes: `public_repo`, `read:org`, `read:user`
+4. Copy token and use:
+
+```bash
+./recon_suite.py -t target.com --github --github-token ghp_yourtoken
+```
+
+### Workflow Examples
+
+**Bug Bounty Workflow:**
+```bash
+# 1. Initial recon
+./recon_suite.py -t target.com --ct --save target_scan.json
+
+# 2. Validate and scan
+./recon_suite.py --load target_scan.json
+# Then select option 5 (Validate Live Hosts) in TUI
+# Then select option 7 (Port Scan)
+
+# 3. Look for secrets
+./recon_suite.py -t "target-company" --github --github-token ghp_xxx
+
+# 4. Generate final report
+./recon_suite.py --load target_scan.json
+# Select option 10 (Generate Report)
+```
+
+**Red Team Workflow:**
+```bash
+# Silent, comprehensive scan
+./recon_suite.py -t corporation.com --all --json --csv -o corp_intel.txt
+
+# Review results
+cat corp_intel.txt
+
+# Export to other tools
+cat recon_export_*.json | jq '.results.live_hosts'
+```
+
+---
+
+## 🛡️ Legal & Ethical Use
+
+### ⚠️ IMPORTANT DISCLAIMER
+
+This tool is designed for **AUTHORIZED SECURITY TESTING ONLY**.
+
+### ✅ Authorized Use Cases
+
+- Penetration testing with **written permission**
+- Bug bounty programs (within scope)
+- Security research on **your own** infrastructure
+- Red team exercises with proper authorization
+- Educational purposes in controlled environments
+- CTF competitions
+- Defensive security operations
+
+### ❌ Prohibited Activities
+
+- Scanning targets without explicit authorization
+- Violating terms of service
+- Unauthorized access to systems
+- Data theft or malicious reconnaissance
+- Any illegal activities
+
+**You are solely responsible for your use of this tool. Always obtain proper authorization before scanning.**
+
+---
+
+## 🎓 How It Works
+
+### Certificate Transparency Scanner
+
+1. Queries public CT log APIs (crt.sh, etc.)
+2. Extracts all certificate entries for target domain
+3. Parses `name_value` and `common_name` fields
+4. Cleans wildcards and duplicates
+5. Returns unique subdomain list
+
+### GitHub Secret Scanner
+
+1. Searches GitHub API for target-related repositories
+2. Looks for sensitive filename patterns (`.env`, `credentials.json`, etc.)
+3. Performs pattern matching for known secret types
+4. Calculates Shannon entropy for confidence scoring
+5. Deduplicates and returns findings with URLs
+
+### Company Intelligence
+
+1. Generates common email patterns
+2. Attempts to scrape company website
+3. Extracts emails using regex
+4. Detects technologies from HTML/headers
+5. Checks social media presence (LinkedIn, Twitter, GitHub)
+
+### Live Host Validator
+
+1. Resolves DNS for each subdomain
+2. Tests HTTPS connectivity (preferred)
+3. Falls back to HTTP if needed
+4. Extracts server headers and page titles
+5. Optionally scans common ports
+6. Multi-threaded for performance
+
+---
+
+## 📊 Performance
+
+- **Subdomain Discovery**: ~50-200 subdomains/minute (depends on CT logs)
+- **Live Host Validation**: ~15 hosts/second (15 concurrent threads)
+- **GitHub Scanning**: ~5 repos/minute (API rate limits)
+- **Port Scanning**: ~100 ports/second
+- **Memory Usage**: <100MB typical
+- **CPU Usage**: Moderate (multi-threaded)
+
+---
+
+## 🐛 Troubleshooting
+
+### "ModuleNotFoundError: No module named 'rich'"
+
+```bash
+pip3 install rich requests
+# or
+python3 -m pip install rich requests
+```
+
+### GitHub API Rate Limit
+
+**Problem:** `403 Forbidden` or rate limit errors
+
+**Solution:**
+```bash
+# Use a GitHub token
+./recon_suite.py -t target.com --github --github-token ghp_yourtoken
+```
+
+### WHOIS Command Not Found
+
+**Problem:** `whois: command not found`
+
+**Solution:**
+```bash
+# Debian/Ubuntu
+sudo apt install whois
+
+# macOS
+brew install whois
+
+# RHEL/CentOS
+sudo yum install jwhois
+```
+
+### Permission Denied
+
+```bash
+chmod +x recon_suite.py
+```
+
+### SSL Certificate Errors
+
+```bash
+pip3 install --upgrade certifi requests urllib3
+```
+
+---
+
+## 🗺️ Roadmap
+
+### Upcoming Features
+
+- [ ] Shodan/Censys API integration
+- [ ] Passive DNS lookups
+- [ ] Wayback Machine integration
+- [ ] Screenshot capture of live hosts
+- [ ] Nuclei template execution
+- [ ] Custom wordlist support
+- [ ] VPN/Proxy support
+- [ ] Email verification (SMTP)
+- [ ] Advanced reporting (HTML, PDF)
+- [ ] Integration with other tools (Amass, Subfinder)
+- [ ] Distributed scanning
+- [ ] Web dashboard
+- [ ] Plugin system
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+### Reporting Issues
+
+- Use GitHub Issues to report bugs
+- Include reproduction steps
+- Provide error messages and logs
+- Mention your OS and Python version
+
+### Suggesting Features
+
+- Open a GitHub Issue with the `enhancement` label
+- Describe the use case
+- Explain why it would be valuable
+
+### Code Contributions
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Test thoroughly
+5. Commit (`git commit -m 'Add amazing feature'`)
+6. Push (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Code Style
+
+- Follow PEP 8
+- Add docstrings to functions
+- Keep single-file architecture
+- Minimize dependencies
+- Add error handling
+
+---
+
+## 📄 License
+
+```
+MIT License
+
+Copyright (c) 2025 DarkSec LabZ
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 🙏 Acknowledgments
+
+- **Rich Library** - Beautiful terminal formatting by Will McGugan
+- **crt.sh** - Certificate Transparency log database
+- **GitHub API** - Code search capabilities
+- **Python Community** - For amazing libraries and support
+
+---
+
+## 📧 Contact & Support
+
+- **GitHub Issues**: Bug reports and feature requests
+- **Security Issues**: Report privately via GitHub Security Advisories
+- **Documentation**: See `/docs` folder for detailed guides
+
+---
+
+## ⭐ Star History
+
+If you find this tool useful, please give it a star!
+
+---
+
+## 🎯 Quick Reference
+
+### Essential Commands
+
+```bash
+# Interactive mode
+./recon_suite.py
+
+# Full scan
+./recon_suite.py -t example.com --all
+
+# Subdomain discovery only
+./recon_suite.py -t example.com --ct --validate
+
+# GitHub secrets only
+./recon_suite.py -t "company" --github --github-token ghp_xxx
+
+# Export all formats
+./recon_suite.py -t example.com --all --json --csv -o report.txt
+
+# Save and resume
+./recon_suite.py -t example.com --all --save scan.json
+./recon_suite.py --load scan.json
+```
+
+### One-Liner Install & Run
+
+```bash
+wget https://raw.githubusercontent.com/yourusername/reconmaster-pro/main/recon_suite.py && chmod +x recon_suite.py && pip3 install rich requests && ./recon_suite.py
+```
+
+---
+
+<div align="center">
+
+**Built with ❤️ by [DarkSec LabZ](https://github.com/yourusername)**
+
+*Reconnaissance made simple, powerful, and beautiful.*
+
+[⬆ Back to Top](#reconmaster-pro-v20)
+
+</div>
